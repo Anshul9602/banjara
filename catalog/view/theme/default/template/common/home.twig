@@ -1,0 +1,384 @@
+{{ header }}
+
+<!-- Swiper Slider CSS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+
+
+
+<div id="content" style="    background-color: #ddd6c8;"></div>
+
+<!-- hero slider area start -->
+<section class="slider-area">
+	<div class="row">
+		<div class="slider_banner col-12">
+			<div class="desktop-slider hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+				{% for banner in banners %}
+				<div>
+
+					<a href="{{ banner.link }}">
+						<p class="serv-name11 ">Shop this
+						</p>
+					</a>
+					<a href="{{ banner.link }}">
+						<p class="serv-name12 ">View All
+						</p>
+					</a>
+					<img src="{{ banner.image }}" alt="" class="img-response slider-img">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+<!-- hero slider area end -->
+<section class="slider-area" style="background:#fcf5e7;">
+	<div class="row pt-5 pb-5 m-0" style="    justify-content: space-around;">
+
+		<div class="col-sm-12 text-center  pb-4" >
+			<img class="desk"src="image/new/b1/sgb2.png" alt="" width="100%">
+			<img class="mobl"src="image/new/b1/sgb3.png" alt="" width="100%">
+		</div>
+		<br>
+		<div class="col-md-3">
+			<div class="product-card text-center">
+				<div class="image">
+					<a href="index.php?route=product/category&path=60_63">
+						<img style="z-index: 99999999;" src="image/new/l1/11.png" alt="" title=""
+							class="img-responsive pthumb" />
+					</a>
+				</div>
+
+				<a href="index.php?route=product/category&path=60_63">
+					<h2 class="p-2" style="color:  #000; text-transform: capitalize;    font-weight: 200;">
+						Traditional Saga
+					</h2>
+				</a>
+				<div style="height: 1px;background: #eda941;"></div>
+				<p style="font-size: 18px;padding:10px 0;">The vintage banjara home
+					decor for your soul space.
+
+				</p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="product-card text-center">
+				<div class="image">
+					<a href="index.php?route=product/category&path=60_61">
+						<img style="z-index: 99999999;" src="image/new/l1/41.png" alt="" title=""
+							class="img-responsive pthumb" />
+					</a>
+				</div>
+
+				<a href="index.php?route=product/category&path=60_61">
+					<h2 class="p-2" style="color:  #000; text-transform: capitalize;    font-weight: 200;">
+						Luxé Saga
+					</h2>
+				</a>
+				<div style="height: 1px;background: #eda941;"></div>
+				<p style="font-size: 18px;padding:10px 0;">The Intricate embroidered
+					cushion made with love.
+
+
+				</p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="product-card text-center">
+				<div class="image">
+					<a href="index.php?route=product/category&path=60_126">
+						<img style="z-index: 99999999;" src="image/new/l1/51.png" alt="" title=""
+							class="img-responsive pthumb" />
+					</a>
+				</div>
+
+				<a href="index.php?route=product/category&path=60_126">
+					<h2 class="p-2" style="color:  #000; text-transform: capitalize;    font-weight: 200;">
+						Modern Saga
+					</h2>
+				</a>
+				<div style="height: 1px;background: #eda941;"></div>
+				<p style="font-size: 18px;padding:10px 0;">The timeless motifs, infused
+					with a modern aesthetic
+
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="slider-area" style=" background-image: url('image/new/b1/71.png');background-size: contain;">
+	<div class="row md-p-5 p-1 sth" style="    justify-content: space-around;">
+
+
+		<div class="col-md-6 d-flex text-center" style="    justify-content: center;">
+			<span><img style="margin:auto;width:50px;" src="image/icons/new/41.png" title="" alt=""
+					class="img-responsive logo-home" /></span>
+			<h1 class="p-2" style="color:  #fff; text-transform: capitalize;">
+				Shop the Handmade
+			</h1><span><img style="margin:auto;width:50px;" src="image/icons/new/41.png" title="" alt=""
+					class="img-responsive logo-home" /></span>
+		</div>
+
+	</div>
+</section>
+<section class="  text-center" style="background:#e2eced;">
+
+	<div class="container pt-5 pb-4">
+		<div class="row pt-3 pb-3 sth1" style="max-width: 90%;margin:auto;">
+
+			<div class="col-md-4 mt-5 col-6" style="padding: 0 25px;">
+
+				<a href="{{ gb1_link }}">
+
+					<img src="image/{{ gb1_image }}" alt="" style="width:100%;" class="serv-img imgc" title="" />
+					<p class="serv-name4">{{ gb1_title }}
+					</p>
+				</a>
+
+			</div>
+			<div class="col-md-4 mt-5 col-6" style="padding: 0 25px;">
+
+				<a href="{{ gb2_link }}">
+
+					<img src="image/{{ gb2_image }}" alt="" style="width:100%;" class="serv-img imgc" title="" />
+					<p class="serv-name4">{{ gb2_title }}
+					</p>
+				</a>
+
+			</div>
+			<div class="col-md-4 mt-5 col-6" style="padding: 0 25px;">
+
+				<a href="{{ gb3_link }}">
+
+					<img src="image/{{ gb3_image }}" alt="" style="width:100%;" class="serv-img imgc" title="" />
+					<p class="serv-name4">{{ gb3_title }}
+					</p>
+				</a>
+
+			</div>
+			<div class="col-md-4 mt-5 col-6" style="padding: 0 25px;">
+
+				<a href="{{ gb4_link }}">
+
+					<img src="image/{{ gb4_image }}" alt="" style="width:100%;" class="serv-img imgc" title="" />
+					<p class="serv-name4">{{ gb4_title }}
+					</p>
+				</a>
+
+			</div>
+			<div class="col-md-4 mt-5 col-6" style="padding: 0 25px;">
+
+				<a href="{{ gb5_link }}">
+
+					<img src="image/{{ gb5_image }}" alt="" style="width:100%;" class="serv-img imgc" title="" />
+					<p class="serv-name4">{{ gb5_title }}
+					</p>
+				</a>
+
+			</div>
+			<div class="col-md-4 mt-5 col-6" style="padding: 0 25px;">
+
+				<a href="{{ gb6_link }}">
+
+					<img src="image/{{ gb6_image }}" alt="" style="width:100%;" class="serv-img imgc" title="" />
+					<p class="serv-name4">{{ gb6_title }}
+					</p>
+				</a>
+
+			</div>
+
+
+			<div class="col-md-8 m-auto md-pt-5 md-pb-5 pt-3 pb-3">
+				<h1 class="md-pt-5" style="color:#32baa1;font-family: 'Radley', sans-serif;">"Chic, Crafted, Captivating
+					”
+				</h1>
+			</div>
+
+		</div>
+	</div>
+</section>
+<section class="  text-center">
+	<div class="image" style="position: relative;">
+		<a href="index.php?route=product/category&path=72_145"><p class="serv-name7 ">View all </p></a>
+		<img src="image/new/b1/8.jpg" alt="" width="100%">
+
+	</div>
+
+
+</section>
+<section class="  text-center">
+	<div class="image" style="position: relative;">
+		
+		<a href="index.php?route=common/wholesale" class="serv-name71"><button class="btn btn-primary mt-4"
+			style="padding:20px 50px;">View All</button></a>
+		<img src="image/new/b1/9.jpg" alt="" width="100%">
+
+	</div>
+
+
+</section>
+
+
+<section class=" mt-5 md-pt-5 pb-4   text-center">
+	<div class="splide" id="value" role="group" aria-label="Splide Basic HTML Example">
+		<div class="splide__track">
+			<ul class="splide__list">
+
+				<li class="splide__slide" style="padding: 0 20px;">
+					<img src="image/new/ti/4.jpg" alt="">
+				</li>
+				<li class="splide__slide" style="padding: 0 20px;">
+					<img src="image/new/ti/5.jpg" alt="">
+				</li>
+
+				<li class="splide__slide" style="padding: 0 20px;">
+					<img src="image/new/ti/6.jpg" alt="">
+				</li>
+				<li class="splide__slide" style="padding: 0 20px;">
+					<img src="image/new/ti/7.jpg" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+</section>
+
+<section class="  text-center">
+	<div class="image" style="position: relative;">
+		
+		
+			<div class="row mob1" style=" align-items: center;min-width:900px;position: absolute;top: 70%;left: 50%;transform: translate(-50%, -50%);">
+				
+				<div class="col-md-4 col-4">
+					<div class="image">
+						<a href="">
+							<img style="width:95%;" src="image/icons/new/6.png" alt="" title=""
+								class="img-responsive pthumb" />
+						</a>
+					</div>
+	
+					<a href="">
+						<h5 class="p-2 mt-3" style="color:  #000; text-transform: capitalize;    min-height: 60px;">
+							Meet the Hands
+						</h5>
+					</a>
+	
+				</div>
+				<div class="col-md-4 col-4">
+					<div class="image">
+						<a href="">
+							<img style="width:95%;" src="image/icons/new/7.png" alt="" title=""
+								class="img-responsive pthumb" />
+						</a>
+					</div>
+	
+					<a href="">
+						<h5 class="p-2 mt-3" style="color:  #000; text-transform: capitalize;    min-height: 60px;">
+							House of Handmade luxé
+						</h5>
+					</a>
+	
+				</div>
+				<div class="col-md-4 col-4">
+					<div class="image">
+						<a href="">
+							<img style="width:95%;" src="image/icons/new/8.png" alt="" title=""
+								class="img-responsive pthumb" />
+						</a>
+					</div>
+	
+					<a href="">
+						<h5 class="p-2 mt-3" style="color:  #000; text-transform: capitalize;    min-height: 60px;">
+							Sustainability and Eco-Friendliness
+	
+						</h5>
+					</a>
+	
+				</div>
+	
+			</div>
+		
+		<img src="image/new/b1/10.jpg" alt="" width="100%">
+
+	</div>
+	
+
+
+</section>
+
+{# top picks start #}
+
+
+
+<section class=" top-picks mt-5 mb-5 pt-4 d-none" style="background-color:rgb(245 243 238/1) ;">
+	<div class=" container pt-5 pb-5">
+		<div class="row text-center">
+			<div class="col-sm-12">
+				<h3 style="text-transform:uppercase;">Values we find important</h3>
+			</div>
+		</div>
+		<br />
+		<div class="row mt-1">
+			<div class="col-md-12" style="padding:0 10px;">
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div class=" separation mobp" style="background: #fcf4e6;">
+	<div class="container pb-3">
+
+		<div class="row">
+			<div class="col-12" style="margin-top:25px">
+				<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+				<div class="elfsight-app-8674d6d0-1d23-4bf6-a003-4f998062b560"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+
+
+		// values
+
+		new Splide('#value', {
+			type: 'loop',
+			drag: 'free',
+			focus: 'center',
+			perPage: 3,
+			spaceBetween: 40,
+
+			autoScroll: {
+				speed: 1,
+			},
+			breakpoints: {
+				240: {
+					perPage: 2,
+					spaceBetween: 10
+				},
+				640: {
+					perPage: 2,
+					spaceBetween: 5
+				},
+				767: {
+					perPage: 3,
+					spaceBetween: 20
+				},
+				1024: {
+					spaceBetween: 30,
+					perPage: 3,
+				},
+			},
+			focus: "center",
+		}).mount(window.splide.Extensions);
+
+	})
+
+</script>{{ footer }}

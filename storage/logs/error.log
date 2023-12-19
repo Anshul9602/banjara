@@ -1,0 +1,48 @@
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 73
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 73
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 74
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 74
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 75
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 75
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 77
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 77
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 78
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 78
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 79
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 79
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 81
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 81
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 82
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 82
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 83
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 83
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 85
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 85
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 86
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 86
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 3 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 87
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 87
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 89
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 89
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 90
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 90
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 4 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 91
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 91
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 93
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 93
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 94
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 94
+2023-12-11 12:28:21 - PHP Warning:  Undefined array key 5 in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 95
+2023-12-11 12:28:21 - PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\ban\catalog\controller\common\home.php on line 95
+2023-12-11 7:26:50 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'webuser_banja'@'localhost' (using password: YES) in C:\xampp\htdocs\ban\system\library\db\mysqli.php on line 8
+2023-12-12 9:21:20 - PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ban\system\library\db\mysqli.php on line 8
+2023-12-13 10:45:50 - PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ban\system\library\db\mysqli.php on line 8
+2023-12-14 11:25:59 - PHP Warning:  mysqli::__construct(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ban\system\library\db\mysqli.php on line 8
+2023-12-14 11:36:15 - PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'webuser_banjara' in C:\xampp\htdocs\ban\system\library\db\mysqli.php on line 8
+2023-12-18 16:07:15 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\ban\system\library\mail\mail.php on line 77
+2023-12-18 16:07:17 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\ban\system\library\mail\mail.php on line 77
+2023-12-18 16:07:18 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\ban\system\library\mail\mail.php on line 77
+2023-12-18 16:07:19 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\ban\system\library\mail\mail.php on line 77
+2023-12-18 16:07:19 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\ban\system\library\mail\mail.php on line 77
+2023-12-18 16:07:19 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\ban\system\library\mail\mail.php on line 77
+2023-12-18 16:07:19 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\ban\system\library\mail\mail.php on line 77

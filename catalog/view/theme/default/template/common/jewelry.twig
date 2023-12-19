@@ -1,0 +1,204 @@
+{{ header }}
+<!-- Swiper Slider CSS-->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+
+<style>
+   .serv-name2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);}
+
+</style>
+<!-- hero slider area start -->
+<section class="slider-area">
+   <div class="row">
+      <div class="slider_banner col-12">
+         <div class="desktop-slider hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+            {% for banner in banners %}
+            <a href="{{ banner.link }}">
+               <img src="{{ banner.image }}" alt="" class="img-response slider-img">
+            </a>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</section>
+<!-- hero slider area end -->
+
+<!--discover grid---->
+<section class="shopy_by_room separation mt-20 " style="margin-left: 5%;margin-right:5%;">
+   <div class="container">
+      <div class=" align-items-center heading d-flex justify-content-center row ">
+         <div class="col-md-2" style="text-align: end;"></div>
+         <div class="col-md-6">
+            <p class="text-center hm">
+               <span style="color:rgba(0, 0, 0, 1);">Discover</span>
+               Jewelry
+               <span style="color:rgba(0, 0, 0, 1);">Collections</span>
+            </p>
+            <p class="text-center hm1" style="margin-top:-10px">Explore Our Jewelry Collections by Category</p>
+         </div>
+         <div class="col-md-2 " style="text-align: start;"></div>
+      </div>
+      <br />
+      <div class="row">
+         <div class="col-md-5  text-center serv-name1 mb-3">
+            <a href="index.php?route=product/category&path=85">
+               <p class="serv-name2">Pandent
+               </p>
+               <img width="100%" src="image/Jewelry/main.png" alt="" class="serv-img" title="" />
+            </a>
+         </div>
+         <div class="row col-md-7 text-center serv-name1 mb-2" style="margin-left: 0px;">
+            <div class="col-md-12 col-sm-12 mb-3">
+               <a href="index.php?route=product/category&path=80">
+                  <p class="serv-name2">Rings
+                  </p>
+                  <img height="100%" src="image/Jewelry/ring.png" alt="" class="zoom serv-img" title="" />
+               </a>
+            </div>
+            <div class="col-md-12 col-sm-12 mb-3">
+               <a href="index.php?route=product/category&path=84">
+                  <p class="serv-name2">Bracelet
+                  </p>
+                  <img height="100%" src="image/Jewelry/brash.png" alt="" class="zoom serv-img" title="" />
+               </a>
+            </div>
+         </div>
+         <div class="col-md-6  text-center serv-name1 mb-3">
+            <a href="index.php?route=product/category&path=82">
+               <p class="serv-name2  ">Earrings
+               </p>
+               <img width="100%" src="image/Jewelry/ear.png" alt="" class="serv-img" title="" />
+            </a>
+         </div>
+         <div class="col-md-6  text-center serv-name1 mb-3">
+            <a href="index.php?route=product/category&path=83">
+               <p class="serv-name2  ">Bangle
+               </p>
+               <img width="100%" src="image/Jewelry/bang.png" alt="" class="serv-img" title="" />
+            </a>
+         </div>
+      </div>
+</section>
+<!--discover grid end---->
+<section class="new-arrivals">
+   <div class="container ptb-50">
+      <div class=" align-items-center heading d-flex justify-content-center row ">
+
+         <div class="col-md-10">
+            <p class="text-center hm">
+               <span style="color:rgba(0, 0, 0, 1);">Solitaire Jewelry’s</span>
+               Exclusive
+               <span style="color:rgba(0, 0, 0, 1);">Picks</span>
+            </p>
+            <p class="text-center hm1" style="margin-top:-10px;font-size:20px;">Bestseller products across the portal, especailly handpicked for you.</p>
+         </div>
+
+      </div>
+      <div class="card-sale mt-50">
+         <div class="row">
+            <div class="col-md-10">
+               <div class="swiper topSwiper5">
+                  <div class="swiper-wrapper">
+                     {% if products %}
+                     {% for product in products %}
+                     <div class="swiper-slide">
+                        <div class="product-card text-center">
+                           <div class="image">
+                              <a onclick="" href="{{ product.href }}">
+                                 <img onclick="" style="z-index: 99999999;width:176px;" src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive pthumb" />
+                              </a>
+                           </div>
+                           <a onclick="" href="{{ product.href }}">
+                              <p class="product_name" style="color:  rgba(0, 59, 49, 1);">
+                                 {{ product.name }}
+                              </p>
+                           </a>
+                           {% if product.price %}
+                           <p class="price  mt-10 mb-10" style="color:  rgba(0, 59, 49, 1);">
+                              {% if not product.special %}
+                              {{ product.price }}
+                              {% else %}
+                              <span style="white-space: nowrap" class="price-new">
+                                 {{ product.special }}
+                              </span>
+                              <span style="text-decoration:none; color: #1677BC;display:none;">{{ product.percent }}% OFF</span>
+                              </span>
+                              <span style="white-space: nowrap;color: rgba(0, 59, 49, 1);" class="price-old">
+                                 {{ product.price }}
+                              </span>
+                              {% endif %}
+                           </p>
+                           {% endif %}
+                           <button class="btn btn-primary" onclick="cart.add('{{ product.product_id }}');">ADD TO CART</button>
+                        </div>
+                     </div>
+                     {% endfor %}
+                     {% endif %}
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-2 d-flex     justify-content-center">
+            <a class="d-flex text-center" href=""><button class="btn btn-primary btn-gold m-auto" style="font-size:12px;">More Products</button></a>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+<script>
+  
+ 
+   var swiper = new Swiper(".topSwiper5", {
+      pagination: {
+         el: ".top-swiper-pagination",
+         clickable: true
+         
+      },
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev"
+         
+      },
+      loop: true,
+      autoplay: 4000,
+      speed: 800,
+      // Default parameters
+      slidesPerView: 4,
+      spaceBetween: 1,
+      // Responsive breakpoints
+      breakpoints: {
+          120: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+   });
+  
+
+
+  
+</script>
+{{ footer }}

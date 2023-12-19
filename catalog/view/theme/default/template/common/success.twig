@@ -1,0 +1,40 @@
+{{ header }}
+<div class="breadcrumb-area hidden-phone">
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <div class="breadcrumb-wrap">
+               <nav aria-label="breadcrumb">
+                  <ul class="breadcrumb">
+                     {% for breadcrumb in breadcrumbs %}
+                     <li class="ml-2"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                     &nbsp;/
+                     {% endfor %}
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div id="common-success" class="container text-center">
+ 
+  <div class="row">
+    <div id="content" class="col-sm-12">{{ content_top }}
+      <br /><br /><br />
+      <h1>Thank you for your order!</h1>
+      <br />
+     <p>Your order has been placed successfully. <br />You will receive updates on your registered mail id.<br />
+     For any further quries please feel free to<br /> reach us at - info@banjarahome.com
+     </p>
+     <br />
+      <div class="buttons">
+        <div class="text-center">
+        <a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a>
+        <br /><br /><br /><br /><br />
+        </div>
+      </div>
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}

@@ -1,0 +1,38 @@
+{{ header }}
+
+<!-- Swiper Slider CSS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<style>
+   .slick-next:before {
+    content: '';
+}
+.slick-prev:before {
+    content: '';
+}
+</style>
+
+<section class="container mt-5 mb-3 text-center">
+    <div class="row ">
+{% if collection %}
+                  {% for product in collection %}
+      <div class="col-md-3 col-sm-3 mb-3 mobile-padding-0">
+
+         <a href="{{ product.href }}">
+            <div class="serv-name2" style="  position: absolute;top: 50%;left: 50%; transform: translate(-50%, -50%);">{{ product.name }}</div>
+           
+            <img src="{{product.thumb}}" alt="" class="serv-img" title="" />
+         </a>
+
+      </div>
+   
+   {% endfor %}
+                  {% endif %}
+</section>
+
+
+
+
+
+{{ footer }}
