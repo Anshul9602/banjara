@@ -1,48 +1,94 @@
 {{ header }}
 
 
+<div id="content" style="    background-color: #ddd6c8;"></div>
 
-{# <div class="row">
-	<div class="col-sm-12">
-		<img src="assets/img/banner/about.jpg" alt="" class="img-responsive w-100">
+<!-- hero slider area start -->
+<section class="slider-area">
+	<div class="row">
+		<div class="slider_banner col-12">
+			<div class="desktop-slider hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+				{% for banner in banners %}
+					<div>
+
+						<img src="{{ banner.image }}" alt="" class="img-response slider-img">
+					</div>
+				{% endfor %}
+			</div>
+		</div>
 	</div>
-</div> #}
+</section>
+<!-- hero slider area end -->
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12 mb-5" >
-			<br/><br/>
-			<h2>About Banjara Home
 
-			
-			</h2>
-<div class="row mt-4">
-<div class="col-md-6 d-flex"
-style="align-items: center;">
-<p class="laptop"style="font-size:16px;line-height:2;">Hello and welcome to Banjara Home! My name is Sanjay Rathi, and I am proud to continue my family's tradition of entrepreneurship with our home Furnishings business.<br>
-				<br>
+		<div class="col-md-10 m-auto">
 
-				Since 1985, our family has been serving customers from the streets of rural Rajasthan, providing them with high-quality products and exceptional service. Over the years, we have expanded our reach domestically and have grown our business to new heights.<br><br>
-
-				My personal experience in the export industry has also helped to shape our business, allowing us to explore new markets and reach customers around the world. With this knowledge, I started Banjara Home in 2013, with a focus on providing unique and beautiful home goods to customers around the globe.<br><br>
-				At Banjara Home, we are committed to preserving traditional techniques and supporting local artisans, while also embracing innovation and exploring new design ideas. We are passionate about what we do, and we take pride in every product we offer. We export to over 15 countries to some of the most prominent retail store chains as well as prominent whole sellers.
-				<br><br>
-			</p>
-</div>
-<div class="col-md-6" >
-<img src="image/about1.jpg" alt="" style="width:100%;">
-</div>
-<div class="container col-md-12 "style="margin-top:4rem;">
-<img src="image/banner/Banjara_Banner_6.jpg" alt="" style="width:100%;">
-</div>
-<div class="col-sm-12 mt-5 text-center">
-<h6>Thank you for considering Banjara Home for your home goods needs. We look forward to serving you!</h6>
-		
-</div>
-
-</div>
-			<br/>
-			
+			<h2 class="text-center col-md-10" style="margin: 7% auto;color:#de4d71;">Step into the Handmade luxe of Banjara Home,
+								where tradition meets Modernity.</h2>
+			<div class="col-md-8" style="margin: 5% auto;">
+				<h5 style="text-align: center;">"Hello and a warm welcome to Banjara Home! I'm Sanjay Rathi, proud to carry
+											forward our family's legacy in home furnishings. Since 1985, we've been serving
+											customers from the streets of rural Rajasthan with top-notch products and
+											outstanding service. Over the years, our roots have spread, reaching new
+											heights and serving customers not just locally but across borders.
+				</h5>
 			</div>
+			<div class="row mt-5" style="justify-content: space-between;">
+				<div class="col-md-5 " style="align-items: center;">
+					<p class="laptop" style="font-size:18px;line-height:2;    margin-top: 15%;">My personal journey in the export industry has been
+												quite an adventure, helping us explore new markets
+												worldwide. Fueled by this experience, I founded
+												Banjara Home in 2013 with a mission – to share
+												uniquely beautiful home goods globally.
+
+					</p><br>
+					<p class="laptop" style="font-size:18px;line-height:2;">Here at Banjara Home, we're all about blending
+												tradition and creation. We cherish traditional
+												techniques, support local artisans, and constantly
+												create fresh designs that capture both heritage and
+												modern charm.
+
+
+					</p>
+				</div>
+				<div class="col-md-3">
+					<img src="image/new/l1/41.png" alt="" style="width:100%;">
+				</div>
+
+
+			</div>
+			<div class="row " style="margin-top: 5%;">
+
+				<div class="col-md-4">
+					<img src="image/new/l1/41.png" alt="" style="width:100%;">
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-5 pl-5" style="align-items: center;">
+					<p class="laptop" style="font-size:18px;line-height:2;    text-align: end;    margin-top: 20%;">Every product we offer is a piece of our passion and pride.
+												We've expanded our reach to over 15 countries, finding
+												homes in retail store chains and trusted wholesalers.
+												Join us on this delightful journey where every piece is a
+												story, every corner is adorned with warmth, and every
+												thread connects you to the Banjara Home family.
+
+					</p><br><br>
+					<p class="laptop" style="font-size:18px;line-height:2;    text-align: end;">Welcome to a world where tradition meets modern
+												creation, and your home becomes part of our global tale.
+
+
+					</p>
+				</div>
+
+
+			</div>
+			<br/>
+
+			<h4 class="col-md-8  text-center" style="margin: 7% auto;color:#32baa1;    font-size: 20px;">"In every thread we craft, a story unfolds. Banjara Home: Where tradition meets creation, and
+					your home becomes a chapter in our global tale."
+			</h4>
+			<div class="col-md-5" style="height: 4px;background:#32baa1;margin:5% auto;"></div>
+		</div>
 	</div>
 </div>
 {{ footer }}
