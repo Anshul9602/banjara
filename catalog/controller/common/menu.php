@@ -55,7 +55,7 @@ class ControllerCommonMenu extends Controller
 
 						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id']),
 						'childrens' => $childrens_data,
-						'image' => $this->model_tool_image->resize1($image, '400', '400')
+						'image' => $this->model_tool_image->resize1($image, '250', '250')
 					);
 				}
 				// echo "<pre>";

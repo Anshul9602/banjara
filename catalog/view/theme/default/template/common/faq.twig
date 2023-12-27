@@ -1,0 +1,31 @@
+{{ header }}
+
+
+<div id="content" style="    background-color: #ddd6c8;"></div>
+
+<!-- hero slider area start -->
+<section class="slider-area">
+	<div class="row">
+		<div class="slider_banner col-12">
+			<div class="desktop-slider hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+				{% for banner in banners %}
+				<div>
+
+					<img src="{{ banner.image }}" alt="" class="img-response slider-img">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+<!-- hero slider area end -->
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-10 m-auto">
+
+			
+		</div>
+	</div>
+</div>
+{{ footer }}

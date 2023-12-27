@@ -1,5 +1,5 @@
 <?php
-class ControllerCommonAbout extends Controller
+class ControllerCommonFaq extends Controller
 {
 	public function index()
 	{
@@ -16,14 +16,14 @@ class ControllerCommonAbout extends Controller
 
 		$data['banners'] = array();
 
-		$results = $this->model_design_banner->getBanner(14);
+		$results = $this->model_design_banner->getBanner(15);
 
 		foreach ($results as $result) {
 			if (is_file(DIR_IMAGE . $result['image'])) {
 				$data['banners'][] = array(
 					'title' => $result['title'],
 					'link'  => $result['link'],
-					'image' => $this->model_tool_image->resize1($result['image'], '1920', '738')
+					'image' => $this->model_tool_image->resize1($result['image'], '1920', '832')
 				);
 			}
 		}
@@ -36,7 +36,6 @@ class ControllerCommonAbout extends Controller
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('common/about', $data));
+		$this->response->setOutput($this->load->view('common/faq', $data));
 	}
 }
-
