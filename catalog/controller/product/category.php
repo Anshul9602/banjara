@@ -105,7 +105,7 @@ class ControllerProductCategory extends Controller {
 			);
 
 			if ($category_info['image']) {
-				$data['thumb'] = $this->model_tool_image->resize($category_info['image'],'400', '400');
+				$data['thumb'] = $this->model_tool_image->resize($category_info['image'],'1920', '600');
 			} else {
 				$data['thumb'] = '';
 			}
@@ -142,6 +142,7 @@ class ControllerProductCategory extends Controller {
 				);
 
 				$data['categories'][] = array(
+					
 					'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 					'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
 				);
