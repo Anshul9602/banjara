@@ -16,7 +16,7 @@ class ControllerCommonBlog2 extends Controller
 
 		$data['banners'] = array();
 
-		$results = $this->model_design_banner->getBanner(14);
+		$results = $this->model_design_banner->getBanner(17);
 
 		foreach ($results as $result) {
 			if (is_file(DIR_IMAGE . $result['image'])) {
