@@ -58,12 +58,13 @@ class ControllerCommonMobileMenu extends Controller {
 				// print_r($children_data);
 				// echo "</pre>";
 				// Level 1
-				if("Shop" == $category['name']){
+				if ("Shop" == $category['name']) {
 					$href = $this->url->link('common/shop');
-				}
-				if("Collection" == $category['name']){
+				} elseif ("Collection" == $category['name']) {
 					$href = $this->url->link('common/collection');
-				}else{
+				} elseif ("Wholesale" == $category['name']) {
+					$href = $this->url->link('common/wholesale');
+				} else {
 					$href = $this->url->link('product/category', 'path=' . $category['category_id']);
 				}
 				

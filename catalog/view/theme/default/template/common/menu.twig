@@ -2,6 +2,21 @@
 	.hr1 hr {
 		margin-top: 0;
 	}
+
+	.main-menu ul li ul.dropdown li a {
+
+		padding: 0px;
+	}
+
+	
+	
+
+	.newd {
+		display: block;
+		/* Set the initial display property based on your requirements */
+		transition: display 0.5s ease;
+		/* Add a smooth transition effect */
+	}
 </style>
 
 
@@ -17,90 +32,107 @@
 		<li class="dropdown" style="position: relative;">
 			<a href="{{ category.href }}">{{ category.name }}</a>
 			{% if category.name == "Wholesale" %}
-			<ul class="dropdown row"
-				style="    width: -webkit-fill-available; left: 20%; padding: 20px 50px; position: fixed; top: 150px;">
-				<li class="col-md-12 pt-3 pb-4hr1 row" style="text-align: start;">
-					<div class="col-md-3">
-						<img src="image/new/ti/4.jpg" alt="{{ child.name }}" style="width: 250px;    border-radius: 20px;">
-					</div>
-					<div class="col-md-3">
-						<img src="image/new/ti/5.jpg" alt="{{ child.name }}"style="width: 250px;    border-radius: 20px;">
-					</div>
-					<div class="col-md-3">
-						<img src="image/new/ti/6.jpg" alt="{{ child.name }}"style="width: 250px;    border-radius: 20px;">
-					</div>
-					<div class="col-md-3">
-						<img src="image/new/ti/7.jpg" alt="{{ child.name }}"style="width: 250px;    border-radius: 20px;">
-					</div>
+			<div class="newd">
+				<ul class="dropdown row  "
+					style="   width: -webkit-fill-available;left: 0%;padding: 0px 0px;position: fixed;top: 164px;height: 80vh;overflow-y: scroll;padding-bottom:20px;">
+					<li class="col-md-12 pt-3 pb-4hr1 row" style="text-align: start;    justify-content: space-around;">
+						<div class="col-md-3">
+							<img src="image/new/ti/4.jpg" alt="{{ child.name }}"
+								style="width: 250px;    border-radius: 20px;">
+						</div>
+						<div class="col-md-3">
+							<img src="image/new/ti/5.jpg" alt="{{ child.name }}"
+								style="width: 250px;    border-radius: 20px;">
+						</div>
+						<div class="col-md-3">
+							<img src="image/new/ti/6.jpg" alt="{{ child.name }}"
+								style="width: 250px;    border-radius: 20px;">
+						</div>
 
 
 
-					<a href="{{ child.href }}" class="mt-5" style="font-weight: 600; font-size: 23px; color:#dc3545;">VIEW ALL</a>
-					
-				</li>
-				{% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil'))
-				%}
-				{% for child in children %}
-				{% if child.childrens %}
-				<li class="col-md-12 hr1 pb-3 row" style="text-align: start;">
-					<a class="col-md-12"href="{{ child.href }}" style="font-size: 18px; color:#32baa1;">
-						{{ child.name }}
-					</a>
-					<ul>
-						{% for child1 in child.childrens %}
-						<li>
-							<a href="{{ child1.href }}" style="font-size: 18px; color:#32baa1;">{{ child1.name }}</a>
-						</li>
-						{% endfor %}
-					</ul>
-				</li>
-				{% else %}
-				<li class="col-md-12 hr1 pb-2 row">
-			
-					<a class="col-md-12"href="{{ child.href }}" style="font-size: 18px; color:#32baa1;">
-						{{ child.name }}
-					</a>
-				</li>
-				{% endif %}
 
-				{% endfor %}
-				{% endfor %}
-			</ul>
-			{% else %}
-			<ul class="dropdown row"
-				style="    width: -webkit-fill-available; left: 20%; padding: 20px 50px; position: fixed; top: 150px;">
+						<a href="{{ child.href }}" class="mt-5 col-md-12"
+							style="    padding-left: 6%;font-weight: 600; font-size: 23px; color:#dc3545;">VIEW ALL</a>
 
-				{% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil'))
-				%}
-				{% for child in children %}
-				{% if child.childrens %}
-				<li class="col-md-4 pt-3 hr1 pb-2" style="text-align: center;">
-					{% if child.image %}
-					<img src="{{ child.image }}" alt="{{ child.name }}" style="border-radius: 20px;">
+					</li>
+					{% for children in category.children|batch(category.children|length / category.column|round(1,
+					'ceil'))
+					%}
+					{% for child in children %}
+					{% if child.childrens %}
+					<li class="col-md-12 hr1 pb-3 row" style="text-align: start;">
+						<a class="col-md-12" href="{{ child.href }}"
+							style="    padding-left: 6%;font-size: 18px; color:#32baa1;">
+							{{ child.name }}
+						</a>
+						<ul>
+							{% for child1 in child.childrens %}
+							<li>
+								<a href="{{ child1.href }}"
+									style="    padding-left: 6%;font-size: 18px; color:#32baa1;">{{
+									child1.name }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</li>
+					{% else %}
+					<li class="col-md-12 hr1 pb-2 row">
+
+						<a class="col-md-12" href="{{ child.href }}"
+							style="    padding-left: 6%;font-size: 18px; color:#32baa1;">
+							{{ child.name }}
+						</a>
+					</li>
 					{% endif %}
-					<p
-						style="color:#dc3545; font-weight: 600; text-transform: uppercase; margin-top: 30px; font-size: 20px;">
-						{{ child.name }}
-					</p>
-					<a href="{{ child.href }}" style="font-weight: 600; font-size: 20px; color:#32baa1;">SHOP ALL</a>
-					<ul>
-						{% for child1 in child.childrens %}
-						<li>
-							<a href="{{ child1.href }}" style="font-size: 18px; color:#32baa1;">{{ child1.name }}</a>
-						</li>
-						{% endfor %}
-					</ul>
-				</li>
-				{% else %}
-				<li class="col-md-4">
-					<a href="{{ child.href }}" style="color:#32baa1; font-weight: 800; text-transform: uppercase;">
-						{{ child.name }}
-					</a>
-				</li>
-				{% endif %}
-				{% endfor %}
-				{% endfor %}
-			</ul>
+
+					{% endfor %}
+					{% endfor %}
+				</ul>
+			</div>
+
+			{% else %}
+			<div class="newd">
+				<ul class="dropdown row "
+					style="  width: -webkit-fill-available;left: 0%;padding: 0px 0px;position: fixed;top: 164px;height: 80vh;overflow-y: scroll;">
+
+					{% for children in category.children|batch(category.children|length / category.column|round(1,
+					'ceil'))
+					%}
+					{% for child in children %}
+					{% if child.childrens %}
+					<li class="col-md-4 pt-3 hr1 pb-2" style="text-align: start;padding-left:5%;">
+						<div style="text-align: start;">{% if child.image %}
+							<img src="{{ child.image }}" alt="{{ child.name }}" style="border-radius: 20px;">
+							{% endif %}
+						</div>
+
+						<p
+							style="color:#dc3545; font-weight: 600; text-transform: uppercase; margin-top: 30px; font-size: 20px;">
+							{{ child.name }}
+						</p>
+
+						<ul>
+							{% for child1 in child.childrens %}
+							<li>
+								<a href="{{ child1.href }}" style="font-size: 18px; color:#32baa1;">{{ child1.name
+									}}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</li>
+					{% else %}
+					<li class="col-md-4">
+						<a href="{{ child.href }}" style="color:#32baa1; font-weight: 800; text-transform: uppercase;">
+							{{ child.name }}
+						</a>
+					</li>
+					{% endif %}
+					{% endfor %}
+					{% endfor %}
+				</ul>
+			</div>
+
 			{% endif %}
 		</li>
 
@@ -114,3 +146,51 @@
 
 	</ul>
 </nav>{% endif %}</li>
+
+<script>
+    // Your JavaScript code here
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the header element
+      var header = document.getElementById("header");
+
+      // Get all elements with the class "hidden-class"
+      var elementsToHide = document.querySelectorAll(".newd");
+
+      // Add a scroll event listener to the window
+      window.addEventListener("scroll", function() {
+        // Check if the page is scrolled beyond a certain point, for example, 100 pixels from the top
+        if (window.scrollY > 100) {
+          // Hide all elements by setting their display property to none
+          elementsToHide.forEach(function(element) {
+            element.style.display = "none";
+          });
+        } else {
+          // Display all elements
+          elementsToHide.forEach(function(element) {
+            element.style.display = "block";
+          });
+        }
+      });
+
+      // Add a hover event listener to each navigation list item
+      var navListItems = document.querySelectorAll("nav li");
+
+      navListItems.forEach(function(navListItem) {
+        navListItem.addEventListener("mouseenter", function() {
+          // Display all hidden elements when the user hovers over any navigation list item
+          elementsToHide.forEach(function(element) {
+            element.style.display = "block";
+          });
+        });
+
+        navListItem.addEventListener("mouseleave", function() {
+          // Revert to the previous display state when the user stops hovering
+          if (window.scrollY <= 100) {
+            elementsToHide.forEach(function(element) {
+              element.style.display = "block";
+            });
+          }
+        });
+      });
+    });
+  </script>

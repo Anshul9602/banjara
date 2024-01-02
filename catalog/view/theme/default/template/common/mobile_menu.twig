@@ -1,65 +1,92 @@
 {% if categories %}
-	<style>
-		.mobile_menu .col-12 hr {
-			margin: 7px 0;
-		}
-		.mobile-navigation {
-			max-height: 500px;
-		}
-		.mobile_menu .col-12 a {
-			text-transform: uppercase;
-			color: #333;
-			font-size: 12px;
-		}
-		.collapse-span {
-			display: none;
-		}
-	</style>
-	<div class="row mobile_menu">
-		<br/>
-		<br/>
-		<div class="col-12" style='margin-top:10px'>
-			<a href="index.php?route=common/home">Home</a>
-			<hr/>
-		</div>
-		{% for category in categories %}
+<style>
+	.mobile_menu .col-12 hr {
+		margin: 7px 0;
+	}
+
+	.mobile-navigation {
+		max-height: 500px;
+	}
+
+	.mobile_menu .col-12 a {
+		text-transform: uppercase;
+		color: #333;
+		font-size: 12px;
+	}
+
+	.collapse-span {
+		display: none;
+	}
+</style>
+<!-- Your HTML content here -->
+<div class=" mobile_menu">
+	<nav>
+
+		<ul class="mobile-menu">
+
+			{% for category in categories %}
 			{% if category.children %}
-				<div class="col-12">
-					<a href="#" class="collapse-toggle">{{ category.name }}</a>
-					<hr/>
-					<span class="collapse-span">
-						{% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
-							{% for child in children %}
-								<div class="col-12">
-									<a href="{{ child.href }}">{{ child.name }}</a>
-									<hr/>
-								</div>
-							{% endfor %}
-						{% endfor %}
-						<span></div>
-					{% else %}
-						{% if category.name == "Diamonds" or category.name == "diamonds"  %}
-							<div class="col-12">
-								<a href="index.php?route=common/diamonds">{{ category.name }}</a>
-								<hr/>
-							</div>
-						{% else %}
-							<div class="col-12">
-								<a href="{{ category.href }}">{{ category.name }}</a>
-								<hr/>
-							</div>
-						{% endif %}
-					{% endif %}
-				{% endfor %}
-				<div class="col-12">
-					<a href="index.php?route=common/about">About Us</a>
-				</div>
+			<li class="menu-item-has-children">
+				{% set myVariable = category.href %}
+				<a href="{{ category.href }}">{{ category.name }}</a>
+				<ul class="dropdown">
+					{% for children in category.children|batch(category.children|length /
+					category.column|round(1, 'ceil')) %}
+					{% for child in children %}
+					<li>
+						<a href="{{ child.href }}">{{ child.name }}</a>
+					</li>
+					{% endfor %}
+					{% endfor %}
+				</ul>
+			</li>
+			{% else %}
+
+			<li class="d-flex" style="align-items: center;">
+				{% if category.name == "New Arrival" %}
+				<a href=" {{ category.href }} " class="blink" style="color:#f48282;font-weight: bold;">
+					{{ category.name }}</a>
+				{% else %}
+
+				<a href=" {{ category.href }} ">
+					{{ category.name }}</a>
+				{% endif %}
+			</li>
+
 			{% endif %}
-			<script>
-				$(document).ready(function () {
-$(".collapse-toggle").click(function (e) {
-e.preventDefault();
-$(".collapse-span").slideToggle();
-})
-})
-			</script>
+			{% endfor %}
+
+		</ul>
+
+	</nav>
+
+
+</div>
+{% endif %}
+<script>
+	$(document).ready(function () {
+		$(".collapse-toggle").click(function (e) {
+			e.preventDefault();
+			$(".collapse-span").slideToggle();
+		})
+	})
+	document.addEventListener("DOMContentLoaded", function () {
+		// Get all elements with the class "collapse-toggle"
+		var collapseToggles = document.querySelectorAll(".collapse-toggle");
+
+		// Add click event listeners to the collapse toggles
+		collapseToggles.forEach(function (collapseToggle) {
+			collapseToggle.addEventListener("click", function () {
+				// Get the next sibling element (which is the span with class "collapse-span")
+				var collapseSpan = this.nextElementSibling;
+
+				// Toggle the display property of the collapse-span element
+				if (collapseSpan.style.display === "block") {
+					collapseSpan.style.display = "none";
+				} else {
+					collapseSpan.style.display = "block";
+				}
+			});
+		});
+	});
+</script>

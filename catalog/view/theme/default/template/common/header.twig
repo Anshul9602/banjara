@@ -83,7 +83,7 @@
 				display: none;
 			}
 
-			@media screen and(max-width:650px) {
+			@media only screen and (max-width:650px) {
 				.desk {
 					display: none;
 				}
@@ -98,7 +98,7 @@
 				.serv-name11 {
 
 					top: 75% !important;
-					left: 30% !important;
+					left: 32% !important;
 
 					padding: 5px 20px !important;
 
@@ -138,7 +138,8 @@
 				}
 				.serv-name7 {
 					min-width: 100px !important;
-					padding: 5px 25px !important;
+					padding: 5px 20px !important;
+					    font-size: 13px !important;
 				}
 				.btn-primary {
 					font-size: 15px !important;
@@ -378,7 +379,7 @@
 					</div>
 					<div class="container">
 						<div
-							class="row align-items-center ptb-5">
+							class="row align-items-end ptb-5">
 
 							<!-- start logo area -->
 							<div class="col-md-3 text-center p-2">
@@ -399,7 +400,7 @@
 							</div>
 
 							<div class="col-md-3">
-								<div style="max-width:80%; float:right" class="header-right d-flex align-items-center justify-content-end w-100">
+								<div style="max-width:80%; float:right;padding-bottom:20px;" class="header-right d-flex align-items-center justify-content-end w-100">
 									<div class="header-configure-area w-100">
 										<ul class="nav justify-content-space-around w-100">
 											<li class="header-search-container mr-0">
@@ -553,20 +554,20 @@
 										<ul class="dropdown-list">
 											{% if logged %}
 												<li>
-													<a href="{{ account }}">{{ text_account }}</a>
+													<a style="color:black;"href="{{ account }}">{{ text_account }}</a>
 												</li>
 												<li>
-													<a href="{{ order }}">{{ text_order }}</a>
+													<a style="color:black;"href="{{ order }}">{{ text_order }}</a>
 												</li>
 												<li>
-													<a href="{{ logout }}">{{ text_logout }}</a>
+													<a style="color:black;"href="{{ logout }}">{{ text_logout }}</a>
 												</li>
 											{% else %}
 												<li>
-													<a href="{{ register }}">{{ text_register }}</a>
+													<a style="color:black;"href="{{ register }}">{{ text_register }}</a>
 												</li>
 												<li>
-													<a href="{{ login }}">{{ text_login }}</a>
+													<a style="color:black;"href="{{ login }}">{{ text_login }}</a>
 												</li>
 											{% endif %}
 										</ul>
@@ -580,12 +581,12 @@
 								<ul>
 									<li>
 										<i class="fa fa-mobile"></i>
-										<a href="#">
+										<a href="tel:+91-9001709690">
 											+91-9001709690</a>
 									</li>
 									<li>
 										<i class="fa fa-envelope-o"></i>
-										<a href="#">info@banjarahome.com</a>
+										<a href="mailto:banjarahome@gmail.com">banjarahome@gmail.com</a>
 									</li>
 								</ul>
 							</div>
