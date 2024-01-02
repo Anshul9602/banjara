@@ -34,7 +34,7 @@
 			{% if category.name == "Wholesale" %}
 			<div class="newd">
 				<ul class="dropdown row  "
-					style="   width: -webkit-fill-available;left: 0%;padding: 0px 0px;position: fixed;top: 164px;height: 80vh;overflow-y: scroll;padding-bottom:20px;">
+					style="   width: -webkit-fill-available;left: 20%;padding: 0px 0px;position: fixed;top: 164px;height: 80vh;overflow-y: scroll;padding-bottom:20px;">
 					<li class="col-md-12 pt-3 pb-4hr1 row" style="text-align: start;    justify-content: space-around;">
 						<div class="col-md-3">
 							<img src="image/new/ti/4.jpg" alt="{{ child.name }}"
@@ -94,7 +94,7 @@
 			{% else %}
 			<div class="newd">
 				<ul class="dropdown row "
-					style="  width: -webkit-fill-available;left: 0%;padding: 0px 0px;position: fixed;top: 164px;height: 80vh;overflow-y: scroll;">
+					style="  width: -webkit-fill-available;left: 20%;padding: 0px 0px;position: fixed;top: 164px;height: 80vh;overflow-y: scroll;">
 
 					{% for children in category.children|batch(category.children|length / category.column|round(1,
 					'ceil'))

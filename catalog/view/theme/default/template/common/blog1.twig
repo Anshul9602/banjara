@@ -1,0 +1,107 @@
+{{ header }}
+
+
+<div id="content" style="    background-color: #ddd6c8;"></div>
+
+<!-- hero slider area start -->
+<section class="slider-area">
+	<div class="row">
+		<div class="slider_banner col-12">
+			<div class="desktop-slider hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+
+				<div>
+
+					<img src="image/new/blog/blo1.png" alt="" class="img-response slider-img">
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<section class="slider-area">
+	<div class="row">
+		<div class="slider_banner col-12">
+			<div class="desktop-slider hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+				{% for banner in banners %}
+				<div>
+
+					<img src="{{ banner.image }}" alt="" class="img-response slider-img">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+<!-- hero slider area end -->
+<div style="background-image: url('image/new/l1/a_back.png');">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-10 m-auto">
+				<h1 class="text-center col-md-10"
+					style="margin: 3% auto;color:#de4d71;     font-weight: 500;   font-family: 'Radley', sans-serif;">
+					“Tradition Rewoven”
+				</h1>
+				<h3 class="text-center col-md-10"
+					style="margin: 1% auto;color:#32baa1;     font-weight: 500;   font-family: 'Radley', sans-serif;">
+					“The Journey of Banjara Embroidery into Contemporary Elegance"</h3>
+				<div class="col-md-8" style="margin: 5% auto;">
+					<h5 style="text-align: center;font-family: 'Avenir LT Std';">In the heart of Banjara Home lies a
+						tale spun with threads of tradition, an
+						ode to the timeless artistry of Banjara embroidery. Our journey begins with
+						the rich heritage of this craft, a tradition that whispers stories of nomadic
+						tribes and their vibrant culture.
+					</h5>
+				</div>
+				<div class="row mt-5" style="justify-content: space-between;">
+					<div class="col-md-5 " style="align-items: center;">
+						<h3 style="color: black;margin-top: 15%;">Connecting the Threads of Home:
+						</h3>
+						<p class="laptop" style="font-size:18px;line-height:2;    margin-top: 5%;">The motto is clear:
+							connect the tradition to modern living
+							without losing the essence. Banjara Home's contemporary
+							embroidered pieces are not just furnishings; We are storytellers,
+							connecting your space to a heritage that spans generations.
+							Each piece invites you to be a part of this narrative, to weave
+							tradition into the fabric of your daily life.
+
+						</p><br>
+
+					</div>
+					<div class="col-md-4">
+						<img src="image/new/blog/4.png" alt="" style="width:100%;">
+					</div>
+				</div>
+				<div class="row " style="margin-top: 5%;">
+
+					<div class="col-md-4">
+						<img src="image/new/blog/5.png" alt="" style="width:100%;">
+					</div>
+					<div class="col-md-2">
+
+					</div>
+					<div class="col-md-5 pl-5" style="align-items: center;">
+						<h3 style="color:black;margin-top: 15%;">Embark on the Journey:</h3>
+						<p class="laptop" style="font-size:18px;line-height:2;    text-align: start;    margin-top: 5%;">
+							As you explore Banjara Home's collection, you embark on a
+							journey – a journey that transcends time, weaving tradition
+							into the very fabric of your contemporary living space.
+							Welcome to a home where every thread is a connection to
+							tradition, and every piece is a testament to the
+							transformative power of art.
+
+
+						</p><br><br>
+
+					</div>
+				</div>
+				<br />
+
+
+				<div class="col-md-5" style="height: 4px;background:#32baa1;margin:5% auto;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ footer }}
