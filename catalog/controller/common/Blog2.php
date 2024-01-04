@@ -23,7 +23,7 @@ class ControllerCommonBlog2 extends Controller
 				$data['banners'][] = array(
 					'title' => $result['title'],
 					'link'  => $result['link'],
-					'image' => $this->model_tool_image->resize1($result['image'], '1920', '738')
+					'image' => $this->model_tool_image->resize1($result['image'], '1920', '492')
 				);
 			}
 		}
