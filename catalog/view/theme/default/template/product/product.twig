@@ -40,6 +40,7 @@
 	.mob_dnone .slick-current img {
 		border: 2px solid #08947a !important;
 	}
+
 	.rp img {
 		border-radius: 20px;
 	}
@@ -50,7 +51,7 @@
 			<div class="col-12">
 				<div class="breadcrumb-wrap">
 					<nav aria-label="breadcrumb">
-						<ul class="breadcrumb">
+						<ul class="breadcrumb" style="    text-transform: lowercase;">
 							{% for breadcrumb in breadcrumbs %}
 							<li class="ml-2">
 								<a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
@@ -108,7 +109,27 @@
 				</div>
 
 				<div class="col-sm-5">
-					<h1 class="text-capitalize md-mt-0 mt-4">{{ heading_title }}</h1>
+					<div class="row">
+						<div class="col-md-10 col-10">
+							<h2 class="text-capitalize">{{
+								heading_title }}</h2>
+						</div>
+						<div class="col-md-2 col-2 text-end pl-0" style="text-align: end;">
+							<a class="wishlist_link" onclick="wishlist.add('{{ product_id }}');" style="top:0;">
+								{% if not product.wish %}
+								<i class="pe-7s-like" btnid="{{ product.product_id }}" btnname="{{ product.name }}"
+									btnimg="{{ product.thumb }}" btnhref="{{ product.href }}"
+									btnprice="{{ product.price }}" btnsprice="{{ product.special }}"
+									style="color: #de4d71; font-size:24px;"></i>
+								{% else %}
+								<i class="fa fa-heart" style="color: #de4d71; font-size:24px;" aria-hidden="true"></i>
+
+								{% endif %}
+							</a>
+						</div>
+					</div>
+
+					{# <h1 class="text-capitalize md-mt-0 mt-4">{{ heading_title }}</h1> #}
 					{% if review_status %}
 					<div class="rating">
 						<p>
@@ -419,27 +440,29 @@
 
 							{% endif %}
 						</a>
-						<a onclick="" href="{{ product.href }}">
-							<p class="product_name" style="color:#000; font-size:14px; text-transform:uppercase">
-								{{ product.name }}
-							</p>
-						</a>
-						{% if product.price %}
-						<p class="price mb-10" style="color:#08947a;">
-							{% if not product.special %}
-							{{ product.price }}
-							{% else %}
-							<span style="white-space: nowrap;color:#08947a;" class="price-new">
-								{{ product.special }}
-							</span>
-
-
-							<span style="white-space: nowrap;color: #de4d71;" class="price-old">
+						<div style="min-height: 77px;">
+							<a onclick="" href="{{ product.href }}">
+								<p class="product_name" style="color:#000; font-size:14px; text-transform:uppercase;">
+									{{ product.name }}
+								</p>
+							</a>
+							{% if product.price %}
+							<p class="price mb-10" style="color:#08947a;">
+								{% if not product.special %}
 								{{ product.price }}
-							</span>
+								{% else %}
+								<span style="white-space: nowrap;color:#08947a;" class="price-new">
+									{{ product.special }}
+								</span>
+
+
+								<span style="white-space: nowrap;color: #de4d71;" class="price-old">
+									{{ product.price }}
+								</span>
+								{% endif %}
+							</p>
 							{% endif %}
-						</p>
-						{% endif %}
+						</div>
 						<button class="btn btn-primary" onclick="cart.add('{{ product.product_id }}');">ADD TO
 							CART</button>
 					</div>
@@ -488,7 +511,7 @@
 	// -->
 </script>
 <script type="text/javascript">
-
+	var siz = 0;
 	$('#button-cart').on('click', function () {
 		$.ajax({
 			url: 'index.php?route=checkout/cart/add',
@@ -503,6 +526,8 @@
 			},
 			success: function (json) {
 				if (json['error']) {
+					console.log("esrr");
+					siz = 1;
 					if (json['error']['option']) {
 						for (i in json['error']['option']) {
 							var element = $('#input-option' + i.replace('_', '-'));
@@ -513,6 +538,10 @@
 								element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
 							}
 						}
+
+						alert('Please select size!');
+
+
 					}
 
 					if (json['error']['recurring']) {
@@ -546,6 +575,26 @@
 			}
 		});
 	});
+	// buy now
+	$('#button-buy').on('click', function () {
+
+		
+		$("#button-cart").click();
+
+		console.log("this if", siz);
+		setTimeout(function () {
+
+			if (siz === 1) {
+				console.log("this if", siz);
+				siz = 0;
+			} else {
+				console.log("this else", siz);
+				window.location = "index.php?route=checkout/cart";
+			}
+		}, 800)
+
+
+	})
 	//
 
 </script>
@@ -609,18 +658,8 @@
 		}, 500);
 	});
 	//
-	// buy now
-	$('#button-buy').on('click', function () {
 
-
-		$("#button-cart").click();
-		setTimeout(function () {
-
-			window.location = "index.php?route=checkout/cart";
-		}, 200)
-
-	})
-	//
+	
 
 </script>
 <script type="text/javascript">
