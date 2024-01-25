@@ -45,19 +45,22 @@ class ControllerCommonMobileMenu extends Controller {
 						'filter_category_id'  => $child['category_id'],
 						'filter_sub_category' => true
 					);
-
+					$category_info = $this->model_catalog_category->getCategory($child['category_id']);
+					$image = $category_info['image'];
 					$children_data[] = array(
 
 						'name'  => $child['name'],
 
 						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id']),
-						'childrens' => $childrens_data
+						'childrens' => $childrens_data,
+						'image' => $this->model_tool_image->resize1($image, '250', '250')
 					);
 				}
 				// echo "<pre>";
-				// print_r($children_data);
+				// print_r($category['name']);
 				// echo "</pre>";
 				// Level 1
+
 				if ("Shop" == $category['name']) {
 					$href = $this->url->link('common/shop');
 				} elseif ("Collection" == $category['name']) {
@@ -67,7 +70,8 @@ class ControllerCommonMobileMenu extends Controller {
 				} else {
 					$href = $this->url->link('product/category', 'path=' . $category['category_id']);
 				}
-				
+ // Get the main category image
+
 				$data['categories'][] = array(
 					'name'     => $category['name'],
 					'children' => $children_data,

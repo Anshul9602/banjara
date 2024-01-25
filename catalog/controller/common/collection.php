@@ -89,13 +89,23 @@ class ControllerCommonCollection extends Controller
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
 				}
 			}
+
+			if ("TRADITIONAL SAGA" == $category['name']) {
+				$href = 'index.php?route=product/category&path=60_63_151';
+			} elseif ("LUXE SAGA" == $category['name']) {
+				$href = 'index.php?route=product/category&path=60_61_149';
+			} elseif ("MODERN SAGA" == $category['name']) {
+				$href = $this->url->link('common/wholesale');
+			} else {
+				$href = $this->url->link('product/category', 'path=' . $category['category_id']);
+			}
 			// Level 1
 			$data['collection'][] = array(
 				'thumb' =>  $image,
 				'name'     => $category['name'],
 
 				'column'   => $category['column'] ? $category['column'] : 1,
-				'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+				'href'     => $href
 			);
 		}
 	

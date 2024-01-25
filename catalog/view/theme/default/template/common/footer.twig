@@ -202,19 +202,29 @@
 
 
 <script>
-	$('.search-btn-mobile').click(function (e) {
-		e.preventDefault();
-		if ($(this).prev().val() != "") {
-			location = 'index.php?route=product/search' + '&search=' + encodeURIComponent($(this).prev().val()) + '&description=true';
-		}
-	})
+$('.search-btn-mobile').click(function (e) {
+    e.preventDefault();
+    performSearch($(this).prev().val());
+});
 
-	$('.header-search-btn').click(function (e) {
-		e.preventDefault();
-		if ($("#search_top").val() != "") {
-			location = 'index.php?route=product/search' + '&search=' + encodeURIComponent($("#search_top").val()) + '&description=true';
-		}
-	})
+$('.header-search-btn').click(function (e) {
+    e.preventDefault();
+    performSearch($("#search_top").val());
+});
+
+// Trigger search on "Enter" key press for both inputs
+$('#search, #search_top').on('keydown', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        performSearch($(this).val());
+    }
+});
+
+function performSearch(searchValue) {
+    if (searchValue !== "") {
+        location = 'index.php?route=product/search' + '&search=' + encodeURIComponent(searchValue) + '&description=true';
+    }
+}
 	$('.bot_btn').click(function (e) {
 		console.log("bt");
 		e.preventDefault();

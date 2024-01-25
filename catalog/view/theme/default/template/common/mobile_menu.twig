@@ -33,9 +33,22 @@
 					{% for children in category.children|batch(category.children|length /
 					category.column|round(1, 'ceil')) %}
 					{% for child in children %}
+					{% if child.childrens %}
+					<li class="menu-item-has-children">
+						<a href="{{ child.href }}">{{ child.name }}</a>
+					<ul class="dropdown">
+						{% for child1 in child.childrens %}
+						<li>
+							<a href="{{ child1.href }}" style="font-size: 18px; color:#32baa1;">{{ child1.name
+								}}</a>
+						</li>
+						{% endfor %}
+					</ul></li>
+					{% else %}
 					<li>
 						<a href="{{ child.href }}">{{ child.name }}</a>
 					</li>
+					{% endif %}
 					{% endfor %}
 					{% endfor %}
 				</ul>
@@ -43,14 +56,11 @@
 			{% else %}
 
 			<li class="d-flex" style="align-items: center;">
-				{% if category.name == "New Arrival" %}
-				<a href=" {{ category.href }} " class="blink" style="color:#f48282;font-weight: bold;">
-					{{ category.name }}</a>
-				{% else %}
+
 
 				<a href=" {{ category.href }} ">
 					{{ category.name }}</a>
-				{% endif %}
+
 			</li>
 
 			{% endif %}
@@ -63,6 +73,8 @@
 
 </div>
 {% endif %}
+
+
 <script>
 	$(document).ready(function () {
 		$(".collapse-toggle").click(function (e) {
@@ -70,14 +82,12 @@
 			$(".collapse-span").slideToggle();
 		})
 	})
-	document.addEventListener("DOMContentLoaded", function () {
-		// Get all elements with the class "collapse-toggle"
+	document.addEventListener("DOMContentLoaded", function () { // Get all elements with the class "collapse-toggle"
 		var collapseToggles = document.querySelectorAll(".collapse-toggle");
 
 		// Add click event listeners to the collapse toggles
 		collapseToggles.forEach(function (collapseToggle) {
-			collapseToggle.addEventListener("click", function () {
-				// Get the next sibling element (which is the span with class "collapse-span")
+			collapseToggle.addEventListener("click", function () { // Get the next sibling element (which is the span with class "collapse-span")
 				var collapseSpan = this.nextElementSibling;
 
 				// Toggle the display property of the collapse-span element
@@ -88,5 +98,4 @@
 				}
 			});
 		});
-	});
-</script>
+	});</script>

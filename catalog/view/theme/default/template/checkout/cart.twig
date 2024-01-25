@@ -20,6 +20,7 @@
 	</div>
 </div>
 <br/>
+
 <div id="checkout-cart" class="container">
 	<div class="row">
 
@@ -102,10 +103,10 @@
 											</div>
 										</div>
 									</td>
-									<td class="text-right">{{ product.price }}</td>
-									<td class="text-right">{{ product.total }}</td>
-									<td>
-										<button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');">
+									<td class="text-center">{{ product.price }}</td>
+									<td class="text-center">{{ product.total }}</td>
+									<td class="text-end">
+										<button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');" style="margin-left: 25%;">
 											<i class="fa fa-times-circle"></i>
 										</button>
 									</td>
@@ -126,9 +127,15 @@
 					{% endfor %}
 				</div>
 			{% endif %}
+			<hr>
 			<br/>
-			<div class="row">
-				<div class="col-sm-4 offset-sm-8">
+			<div class="row" style="justify-content: space-between;">
+			<div class="col-md-4">
+				
+
+			{{ coupon }}
+			</div>
+				<div class="col-md-4 ">
 
 					{% for total in totals %}
 						<div class="row mt-10">
@@ -147,7 +154,7 @@
 			</div>
 		</div>
 		<br/>
-      {{ coupon }}
+ 
 
 		<div class="buttons clearfix">
 			<div class="pull-right">

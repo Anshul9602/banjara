@@ -34,7 +34,7 @@ class ControllerProductCategory extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			$limit = (int)$this->request->get['limit'];
+			$limit = 16;
 		} else {
 			$limit = $this->config->get('theme_' . $this->config->get('config_theme') . '_product_limit');
 		}
@@ -155,8 +155,8 @@ class ControllerProductCategory extends Controller {
 				'filter_filter'      => $filter,
 				'sort'               => $sort,
 				'order'              => $order,
-				'start'              => ($page - 1) * $limit,
-				'limit'              => $limit
+				'start'              => ($page - 1) * 16,
+				'limit'              => 16
 			);
 
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
