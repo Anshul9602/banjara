@@ -90,7 +90,7 @@ class __TwigTemplate_4073c49878844aac3c6cbee45b9be0bc8cd9b428c16b33adb1d7eb2e154
                                 if (twig_get_attribute($this->env, $this->source, $context["child"], "childrens", [], "any", false, false, false, 24)) {
                                     // line 25
                                     echo "\t\t\t\t\t\t\t\t\t\t<li >
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"\" style=\" color:#32baa1;font-weight: 800;    text-transform: uppercase; \">";
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"\" style=\" color:#05b59d;font-weight: 800;    text-transform: uppercase; \">";
                                     // line 26
                                     echo twig_get_attribute($this->env, $this->source, $context["child"], "name", [], "any", false, false, false, 26);
                                     echo "</a>
@@ -128,7 +128,7 @@ class __TwigTemplate_4073c49878844aac3c6cbee45b9be0bc8cd9b428c16b33adb1d7eb2e154
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
                                     // line 41
                                     echo twig_get_attribute($this->env, $this->source, $context["child"], "href", [], "any", false, false, false, 41);
-                                    echo " \" style=\" color:#32baa1;font-weight: 800;    text-transform: uppercase; \">";
+                                    echo " \" style=\" color:#05b59d;font-weight: 800;    text-transform: uppercase; \">";
                                     echo twig_get_attribute($this->env, $this->source, $context["child"], "name", [], "any", false, false, false, 41);
                                     echo "</a>
 
@@ -172,7 +172,7 @@ class __TwigTemplate_4073c49878844aac3c6cbee45b9be0bc8cd9b428c16b33adb1d7eb2e154
                                 if (twig_get_attribute($this->env, $this->source, $context["child"], "childrens", [], "any", false, false, false, 55)) {
                                     // line 56
                                     echo "\t\t\t\t\t\t\t\t\t\t<li class=\" col-md-2 pt-3 hr1 pb-2\">
-\t\t\t\t\t\t\t\t\t\t\t<p  style=\" color:#32baa1;font-weight: 800;    text-transform: uppercase; \" >";
+\t\t\t\t\t\t\t\t\t\t\t<p  style=\" color:#05b59d;font-weight: 800;    text-transform: uppercase; \" >";
                                     // line 57
                                     echo twig_get_attribute($this->env, $this->source, $context["child"], "name", [], "any", false, false, false, 57);
                                     echo "</p>
@@ -210,7 +210,7 @@ class __TwigTemplate_4073c49878844aac3c6cbee45b9be0bc8cd9b428c16b33adb1d7eb2e154
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
                                     // line 72
                                     echo twig_get_attribute($this->env, $this->source, $context["child"], "href", [], "any", false, false, false, 72);
-                                    echo " \" style=\" color:#32baa1;font-weight: 800;    text-transform: uppercase; \">";
+                                    echo " \" style=\" color:#05b59d;font-weight: 800;    text-transform: uppercase; \">";
                                     echo twig_get_attribute($this->env, $this->source, $context["child"], "name", [], "any", false, false, false, 72);
                                     echo "</a>
 

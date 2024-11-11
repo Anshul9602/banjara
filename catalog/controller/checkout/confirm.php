@@ -411,7 +411,7 @@ class ControllerCheckoutConfirm extends Controller {
 		} else {
 			$data['redirect'] = $redirect;
 		}
-
+		
 		$this->response->setOutput($this->load->view('checkout/confirm', $data));
 	}
 }

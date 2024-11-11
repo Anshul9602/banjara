@@ -33,12 +33,27 @@
 		left: auto;
 		right: 15px;
 	}
+	@media only screen and (max-width:650px) {
+		.mmmf{
+			font-size:22px !important;
+		}
+		.iim img{
+			width:40px !important;
+		}
+		footer .header-search-field{
+			height:45px !important;
+			border-radius: 10px !important;
+
+			padding: 10px 20px 10px 25px !important;
+		}
+		
+	}
 </style>
 
 
 <footer style="border:thin solid #f1f1f1;background-image:url('image/new/b1/1.jpg');background-size: cover;">
 	<div class="container pt-5">
-		<div class="row pt-5 pb-5" style="align-items: start;    justify-content: space-between;">
+		<div class="row pt-md-5 pd-md-5 pb-2" style="align-items: start;    justify-content: space-between;">
 			<div class="col-md-6">
 				<h3 style="color:#fff;font-family: 'Work Sans', sans-serif;">Connect with<br>
 					Handmade Luxe living.
@@ -92,16 +107,17 @@
 							</li>
 							<li>
 								<div class="mt-1 mb-3 text-start">
-									<div class="row mt-4 d-flex justify-content-start" style='max-width:auto; '>
-										<div class="col-md-1 text-center p-0" style="width:auto;"><img src="image/icons/new/12.png" width="40"/></div>
+									<div class="row mt-4 d-flex justify-content-start ml-0 mr-0 iim" style='max-width:auto; '>
 										<div class="col-md-1 text-center p-0" style="width:auto;">
-											<a href="https://www.instagram.com/banjara_home_india/"><img src="image/icons/new/11.png"width="60"/></a>
+											<a href=""><img src="image/icons/new/12.png" width="60"/></a></div>
+										<div class="col-md-1 text-center p-0" style="width:auto;">
+											<a href="https://www.instagram.com/banjarahome_/"><img src="image/icons/new/11.png"width="60"/></a>
 										</div>
 										<div class="col-md-1 text-center p-0" style="width:auto;">
-											<a href="https://www.instagram.com/banjara_home_india/"><img src="image/icons/new/10.png"width="60"/></a>
+											<a href="https://www.instagram.com/banjarahome_/"><img src="image/icons/new/10.png"width="60"/></a>
 										</div>
 										<div class="col-md-6 text-start" style="width:auto;">
-											<a href="https://www.instagram.com/banjara_home_india/" style="font-size: 26px;    font-family: 'Radley', 'Georgia', serif;    text-transform: lowercase;">@banjarahome_</a>
+											<a  href="https://www.instagram.com/banjarahome_/" style="font-size: 26px ;    font-family: 'Radley', 'Georgia', serif;    text-transform: lowercase;"><span class="mmmf">@banjarahome_</span></a>
 										</div>
 									</div>
 								</div>
@@ -269,4 +285,5 @@ function performSearch(searchValue) {
 <script src="assets/js/plugins/google-map.js"></script>
 <!-- Main JS -->
 <script src="assets/js/main.js"></script></body></html><script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 

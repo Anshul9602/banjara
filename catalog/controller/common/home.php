@@ -308,8 +308,38 @@ class ControllerCommonHome extends Controller
 			);
 		}
 
-	
+		$result = $this->fetchData("https://graph.instagram.com/me/media?fields=id,caption,media_url&access_token=IGQWRPSmZAzaEFxWDBlSGlmVDJQSWFhLU5acGRaME0zTl8xRVJKc3F4RWpaYmlWTmJnejVmR0VPQ3hRc0tYS0RqbW42dkdid3BGYnFfd1RfTTJEMlBCd3cwa1NpSzVsSURQbDFUdjBwZAlB1YXBtNnNoTFp2bnNWRzQZD");
 
+        // Decode JSON response
+        $data['result_insta'] = json_decode($result);
+
+        // Pass Instagram data to the view
+      
+		$data['instagram_data'] = [];
+
+		if (isset($data['result_insta']->data)) {
+			foreach ($data['result_insta']->data as $post) {
+				// Determine if it's a video based on the presence of video_url field
+				$is_video = isset($post->video_url);
+		
+				// Extract information
+				$post_info = [
+					'media_url' => $post->media_url,
+					'permalink' => $post->permalink,
+					'likes' => $post->like_count,
+					'is_video' => $is_video,
+					// Add more fields as needed
+				];
+		
+				// Add post information to the array
+				$data['instagram_data'][] = $post_info;
+			}
+		
+			// Slice to get only 6 posts
+			$data['instagram_data'] = array_slice($data['instagram_data'], 0, 6);
+		}
+// echo "<pre>"; print_r($data['result_insta']);
+// echo "</pre>";
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
@@ -319,4 +349,14 @@ class ControllerCommonHome extends Controller
 
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
+	function fetchData($url)
+		{
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+			$result = curl_exec($ch);
+			curl_close($ch);
+			return $result;
+		}
 }

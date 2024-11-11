@@ -54,6 +54,8 @@ class ControllerCheckoutCart extends Controller {
 			$this->load->model('tool/upload');
 
 			$data['products'] = array();
+			$data['logged'] = $this->customer->isLogged();
+		
 
 			$products = $this->cart->getProducts();
 
@@ -129,7 +131,7 @@ class ControllerCheckoutCart extends Controller {
 						$recurring .= sprintf($this->language->get('text_payment_cancel'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
 					}
 				}
-
+				$data['stock'] = $product['stock'] ? true : !(!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning'));
 				$data['products'][] = array(
 					'cart_id'   => $product['cart_id'],
 					'thumb'     => $image,
@@ -145,6 +147,8 @@ class ControllerCheckoutCart extends Controller {
 					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
 				);
 			}
+			
+			
 
 			// Gift Voucher
 			$data['vouchers'] = array();
@@ -232,6 +236,8 @@ class ControllerCheckoutCart extends Controller {
 					}
 				}
 			}
+			$data['coupon'] = $data['modules'][0];
+			
 
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
@@ -239,7 +245,8 @@ class ControllerCheckoutCart extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
+			
+			$data['logs'] = 'dasdsa';
 			$this->response->setOutput($this->load->view('checkout/cart', $data));
 		} else {
 			$data['text_error'] = $this->language->get('text_empty');

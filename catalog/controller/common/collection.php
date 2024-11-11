@@ -126,3 +126,4 @@ class ControllerCommonCollection extends Controller
 		$this->response->setOutput($this->load->view('common/collection', $data));
 	}
 }
+

@@ -83,3 +83,4 @@ class ControllerCommonMobileMenu extends Controller {
 		return $this->load->view('common/mobile_menu', $data);
 	}
 }
+
